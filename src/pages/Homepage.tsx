@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { FiSearch } from "react-icons/fi";
 import { MdClearAll } from "react-icons/md";
@@ -11,6 +11,10 @@ const Homepage: React.FC = () => {
   const [searchValue, setSearchValue] = useState<string>("");
 
   const { dispatch, searchData, isLoading, error } = useGlobalContext();
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -78,7 +82,7 @@ const Homepage: React.FC = () => {
       {searchData.length ? (
         <div className="searched-container">
           {searchData.map((person) => (
-            <SinglePerson person={person} />
+            <SinglePerson person={person} key={person._id} />
           ))}
         </div>
       ) : null}
@@ -105,6 +109,8 @@ const StyledHome = styled.section`
     align-items: center;
     justify-content: space-between;
 
+    flex-wrap: wrap;
+
     margin: 3rem 0;
 
     input {
@@ -116,6 +122,8 @@ const StyledHome = styled.section`
       border-width: 0 0 3px;
       background-color: transparent;
       transition: all 0.2s ease-in-out;
+
+      outline: none;
 
       &:focus {
         outline: none;

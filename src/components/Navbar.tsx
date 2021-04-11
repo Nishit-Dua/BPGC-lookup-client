@@ -9,15 +9,8 @@ const Navbar: React.FC = () => {
   const { dispatch, theme } = useGlobalContext();
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) dispatch({ type: "CHANGE_THEME", payload: theme });
-    else dispatch({ type: "CHANGE_THEME", payload: "light" });
-  }, []);
-
-  useEffect(() => {
     console.log(theme);
-    document.body.classList.value = theme;
-    localStorage.setItem("theme", theme);
+    document.body.classList.value = theme || "light";
   }, [theme, dispatch]);
 
   return (

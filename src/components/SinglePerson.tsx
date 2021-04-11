@@ -21,7 +21,7 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
     @goa.bits-pilani.ac.in`.toLowerCase();
 
   return (
-    <StyledPerson key={person._id}>
+    <StyledPerson>
       <h2>{person.name.toLowerCase()}</h2>
       <p className="id">{person.bitsId}</p>
       {year !== "2020" ? (
