@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styled from "styled-components";
+import { Footer, Navbar } from "./components";
+
+import { Errorpage, Homepage, Reasonpage, Rollpage } from "./pages";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Homepage} />
+          <Route path="/source" exact component={Rollpage} />
+          <Route path="/reason" exact component={Reasonpage} />
+          <Route path="*" component={Errorpage} />
+        </Switch>
+        <Footer />
+      </Router>
+    </StyledApp>
   );
 }
+
+const StyledApp = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
+  height: 100vh;
+  width: 100vw;
+`;
 
 export default App;
