@@ -1,5 +1,5 @@
 # React Client Consuming my own API
 
-#### Hosted [Here](http://google.com)
+#### Hosted [Here](https://bpgc-lookup.ml/)
 
 #### Contributions and suggestions welcome :D

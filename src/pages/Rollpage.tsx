@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineGithub } from "react-icons/ai";
 const Rollpage: React.FC = () => {
-  const [timeBeforeRickRoll, setTimeBeforeRickRoll] = useState(2500);
+  const [timeBeforeRickRoll, setTimeBeforeRickRoll] = useState(5000);
 
   useEffect(() => {
     const TICK = 100;
@@ -14,17 +14,19 @@ const Rollpage: React.FC = () => {
         clearInterval(redirectIn);
       };
     } else {
-      // window.location.assign("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+      window.location.assign("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     }
   }, [timeBeforeRickRoll]);
 
   return (
     <StyledSection>
-      <a href="/">
+      <a href="https://github.com/Nishit-Dua/BPGC-lookup-client">
         <p>Source Code</p>
         <AiOutlineGithub />
       </a>
-      <h1>Click here in {timeBeforeRickRoll / 1000}s or else</h1>
+      <h1>
+        Click here in {timeBeforeRickRoll / 1000}s or <span> else</span>
+      </h1>
     </StyledSection>
   );
 };
@@ -52,6 +54,13 @@ const StyledSection = styled.section`
 
     svg {
       font-size: 1.8rem;
+    }
+  }
+
+  h1 {
+    font-weight: 500;
+    span {
+      color: #ff002b;
     }
   }
 `;

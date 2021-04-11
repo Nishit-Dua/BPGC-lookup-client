@@ -8,7 +8,9 @@ interface SinglePersonProps {
 }
 
 const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
+  console.count("rendered");
   const year = person.bitsId.slice(0, 4);
+  let lastSem: number = 0;
   const sgList = year === "2019" ? person.sgList.slice(2) : person.sgList;
   let email;
   if (person.bitsId[4] === "A" || person.bitsId[4] === "B")
@@ -27,12 +29,16 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
           <div className="cg-container">
             {sgList.map((sg, index) => {
               let offset = year === "2017" ? 3 : year === "2016" ? 5 : 1;
+              if (index) lastSem = index + offset;
               return (
                 <p key={index}>
                   Sem {index + offset} CG: {sg || "????"}
                 </p>
               );
             })}
+            {sgList[sgList.length - 1] ? (
+              <p>Sem {lastSem + 1} CG: Current Semester</p>
+            ) : null}
           </div>
           <div className="hostel">
             <p className="address">
@@ -50,8 +56,10 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
           may still stalk your seniors tho 😏
         </p>
       )}
+      Email:
       <a className="email" href={`mailto:${email}`}>
-        Email: {email}
+        {" "}
+        {email}
       </a>
     </StyledPerson>
   );
@@ -93,4 +101,4 @@ const StyledPerson = styled.article`
   }
 `;
 
-export default SinglePerson;
+export default React.memo(SinglePerson);
