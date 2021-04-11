@@ -16,9 +16,10 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
   if (person.bitsId[4] === "A" || person.bitsId[4] === "B")
     email = `f${person._id}@goa.bits-pilani.ac.in`.toLowerCase();
   else
-    email = `${person.bitsId[4]}${person.bitsId.slice(0, 4)}\
-    ${person.bitsId.slice(8, 12)}\
-    @goa.bits-pilani.ac.in`.toLowerCase();
+    email = `${person.bitsId[4]}${person.bitsId.slice(
+      0,
+      4
+    )}${person.bitsId.slice(8, 12)}@goa.bits-pilani.ac.in`.toLowerCase();
 
   return (
     <StyledPerson>

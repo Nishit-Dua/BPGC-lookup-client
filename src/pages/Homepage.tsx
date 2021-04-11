@@ -111,14 +111,13 @@ const StyledHome = styled.section`
 
     flex-wrap: wrap;
 
-    margin: 3rem 0;
+    margin: 3rem 2rem;
 
     input {
       padding: 0.5rem 1rem;
       flex: 1;
       font-size: 1.2rem;
       border-radius: 3px;
-      margin-right: 1rem;
       border-width: 0 0 3px;
       background-color: transparent;
       transition: all 0.2s ease-in-out;
