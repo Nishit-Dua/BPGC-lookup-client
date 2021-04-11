@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Reasonpage: React.FC = () => {
@@ -7,14 +8,15 @@ const Reasonpage: React.FC = () => {
       <h1>My Reasoning For Not Showing 2020 batch's CG</h1>
       <p>
         Hi so a cringe warning, but in my first year i spent way too much time
-        obsessinng over cg that truely hindered my progress in my other life
-        goals, Now don't get me wrong, cg is definately important especially in
+        obsessing over cg which truely hindered my progress in my other life
+        goals, Now don't get me wrong, cg is definitely important especially in
         your first year, but believe me you really don't need to stress about
-        others grades like ever, I am speaking from experience that just will
-        give you unwanted stress. Insted of that just focus on working hard and
-        you'll get a decent CG 💪🏼
+        other's grades like ever, I am speaking from experience that this will
+        just give you unwanted stress. Insted of that just focus on working hard
+        and having fun and you'll get a decent CG 💪🏼 and if you don't that's
+        still not the end of the world!
       </p>
-      <button>Go Back</button>
+      <Link to="/">Go Back</Link>
     </StyledSection>
   );
 };
@@ -39,10 +41,10 @@ const StyledSection = styled.section`
     font-size: 1.1rem;
   }
 
-  button {
-    background-color: #000000;
+  a {
+    background-color: var(--btn-bg);
     border: none;
-    color: white;
+    color: var(--main-bg);
     padding: 0.8rem 1rem;
     border-radius: 5px;
 

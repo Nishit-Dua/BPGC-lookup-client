@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { AiOutlineGithub } from "react-icons/ai";
 const Rollpage: React.FC = () => {
-  const [timeBeforeRickRoll, setTimeBeforeRickRoll] = useState(5000);
+  const [timeBeforeRickRoll, setTimeBeforeRickRoll] = useState(4000);
 
   useEffect(() => {
     const TICK = 100;
@@ -37,8 +37,8 @@ const StyledSection = styled.section`
   align-self: stretch;
 
   a {
-    background-color: #000000;
-    color: white;
+    background-color: var(--btn-bg);
+    color: var(--main-bg);
     padding: 0.8rem 1rem;
     border-radius: 5px;
 
@@ -60,7 +60,7 @@ const StyledSection = styled.section`
   h1 {
     font-weight: 500;
     span {
-      color: #ff002b;
+      color: var(--link-text);
     }
   }
 `;

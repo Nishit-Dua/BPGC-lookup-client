@@ -36,7 +36,8 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
                 </p>
               );
             })}
-            {sgList[sgList.length - 1] ? (
+            {sgList[sgList.length - 1] &&
+            (person.bitsId[4] === "A" || person.bitsId[4] === "B") ? (
               <p>Sem {lastSem + 1} CG: Current Semester</p>
             ) : null}
           </div>
@@ -69,26 +70,25 @@ const StyledPerson = styled.article`
   margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 0.5rem 1rem -0.125rem rgb(10 10 10 / 15%),
-    0 0 0 1px rgb(10 10 10 / 2%);
+  box-shadow: var(--card-shadow);
 
   h2 {
     text-transform: capitalize;
-    color: #312d2d;
+    color: var(--main-text);
     font-weight: 500;
   }
 
   p {
     &.id {
-      color: #666666;
+      color: var(--light-text);
       margin-bottom: 0.5rem;
     }
   }
 
   a {
-    color: #e64100;
+    color: var(--link-text);
     &.email {
-      color: #003479;
+      color: var(--email-text);
     }
   }
 

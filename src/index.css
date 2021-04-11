@@ -14,6 +14,49 @@ body {
   box-sizing: border-box;
   color: inherit;
   font-family: inherit;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.light {
+  --main-bg: #ffffff;
+  --main-text: #1f1f1f;
+
+  --secondry-bg: #242424;
+  --secondry-text: #525252;
+
+  --light-text: #666666;
+
+  --link-text: #e64100;
+  --email-text: #0047a3;
+
+  --btn-bg: #000000;
+
+  --card-shadow: 0 0.5rem 1rem -0.125rem rgba(10, 10, 10, 15%),
+    0 0 0 1px rgba(10, 10, 10, 2%);
+}
+
+.dark {
+  --main-bg: #0e0e0e;
+  --main-text: #f0f0f0;
+
+  --secondry-bg: #e9e9e9;
+  --secondry-text: #d4d4d4;
+
+  --light-text: #a1a1a1;
+
+  --link-text: #ff7a46;
+  --email-text: #aed1ff;
+
+  --btn-bg: #ffffff;
+
+  --card-shadow: 0 0.5rem 1rem -0.125rem rgba(204, 204, 204, 0.15),
+    0 0 0 1px rgba(202, 202, 202, 0.02);
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--main-text);
 }
 
 a {

@@ -6,6 +6,7 @@ const AppContext = React.createContext<null | ReturnType>(null);
 export type StateType = {
   searchData: PersonType[];
   isLoading: boolean;
+  theme: string;
   error: {
     isError: boolean;
     message: string;
@@ -24,6 +25,7 @@ export interface PersonType {
 const initialState: StateType = {
   searchData: [],
   isLoading: false,
+  theme: "",
   error: {
     isError: false,
     message: "",

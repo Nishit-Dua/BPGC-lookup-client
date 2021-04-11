@@ -16,13 +16,21 @@ const Footer: React.FC = () => {
       </p>
       <div className="socials">
         check me out at{" "}
-        <a href="https://www.instagram.com/nishit_dua/">
+        <a
+          href="https://www.instagram.com/nishit_dua/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaInstagram />
         </a>
-        <a href="https://github.com/Nishit-Dua/">
+        <a
+          href="https://github.com/Nishit-Dua/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaGithub />
         </a>
-        <a href="https://twitter.com/_lemark_">
+        <a href="https://twitter.com/_lemark_" target="_blank" rel="noreferrer">
           <FaTwitter />
         </a>
         <a href="mailto:f20180620@goa.bits-pilani.ac.in">
@@ -34,10 +42,10 @@ const Footer: React.FC = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: #ffffff;
+  background-color: var(--main-bg);
   padding: 4rem;
   padding-bottom: 0.5rem;
-  color: #525252;
+  color: var(--secondry-text);
   font-weight: 500;
   width: 100vw;
 
@@ -52,20 +60,25 @@ const StyledFooter = styled.footer`
     }
   }
   a {
-    color: #ff3c3c;
+    color: var(--link-text);
   }
   .socials {
     /* text-align: center; */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #525252;
+    color: var(--secondry-text);
 
     svg {
       margin-left: 0.4rem;
-      color: #ff3c3c;
-      color: #525252;
+      color: var(--secondry-text);
       transform: translateY(12%);
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        transform: translateY(12%) scale(1.3);
+        color: #001483;
+      }
     }
   }
 `;

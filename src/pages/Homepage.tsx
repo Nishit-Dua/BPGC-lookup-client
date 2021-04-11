@@ -66,7 +66,11 @@ const Homepage: React.FC = () => {
       {isLoading ? <Loading /> : null}
       {error.isError ? (
         <p
-          style={{ textAlign: "center", fontSize: "1.3rem", color: "#d10000" }}
+          style={{
+            textAlign: "center",
+            fontSize: "1.3rem",
+            color: "var(--link-text)",
+          }}
         >
           {error.message}
         </p>
@@ -95,7 +99,7 @@ const StyledHome = styled.section`
   justify-content: center;
 
   form {
-    width: clamp(300px, 50%, 800px);
+    width: clamp(250px, 50%, 800px);
     align-self: center;
     display: flex;
     align-items: center;
@@ -115,7 +119,7 @@ const StyledHome = styled.section`
 
       &:focus {
         outline: none;
-        color: #351b00;
+        color: var(--link-text);
         border-color: #ff8604;
         outline: none;
         box-shadow: 3px 3px 11px 1px #acacac77;
@@ -124,7 +128,7 @@ const StyledHome = styled.section`
 
     button {
       background-color: transparent;
-      color: #222222;
+      color: var(--secondry-bg);
       border: none;
       height: 50px;
       width: 50px;
@@ -138,7 +142,7 @@ const StyledHome = styled.section`
       transition: all 0.1s ease-in-out;
 
       &.disabled {
-        color: #8b8b8b;
+        color: var(--light-text);
       }
 
       &:not(:last-child) {
