@@ -8,18 +8,14 @@ interface SinglePersonProps {
 }
 
 const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
+  // FUCK IT i ain't gonna support higher degree lads, big pain in the ass
+  if (person.bitsId[4] !== "A" && person.bitsId[4] !== "B") return <></>;
   console.count("rendered");
   const year = person.bitsId.slice(0, 4);
   let lastSem: number = 0;
-  const sgList = year === "2019" ? person.sgList.slice(2) : person.sgList;
-  let email;
-  if (person.bitsId[4] === "A" || person.bitsId[4] === "B")
-    email = `f${person._id}@goa.bits-pilani.ac.in`.toLowerCase();
-  else
-    email = `${person.bitsId[4]}${person.bitsId.slice(
-      0,
-      4
-    )}${person.bitsId.slice(8, 12)}@goa.bits-pilani.ac.in`.toLowerCase();
+  let sgList = year === "2019" ? person.sgList.slice(2) : person.sgList;
+
+  const email = `f${person._id}@goa.bits-pilani.ac.in`.toLowerCase();
 
   return (
     <StyledPerson>
@@ -37,8 +33,7 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
                 </p>
               );
             })}
-            {sgList[sgList.length - 1] &&
-            (person.bitsId[4] === "A" || person.bitsId[4] === "B") ? (
+            {sgList[sgList.length - 1] ? (
               <p>Sem {lastSem + 1} CG: Current Semester</p>
             ) : null}
           </div>

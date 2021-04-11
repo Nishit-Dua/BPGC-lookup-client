@@ -91,7 +91,6 @@ const Homepage: React.FC = () => {
 };
 
 const StyledHome = styled.section`
-  padding: 1rem;
   flex: 1;
 
   align-self: center;
@@ -103,7 +102,8 @@ const StyledHome = styled.section`
   justify-content: center;
 
   form {
-    width: clamp(250px, 50%, 800px);
+    padding: 0 0.5rem;
+    width: clamp(200px, 60%, 800px);
     align-self: center;
     display: flex;
     align-items: center;
@@ -115,7 +115,7 @@ const StyledHome = styled.section`
 
     input {
       padding: 0.5rem 1rem;
-      flex: 1;
+      width: 100%;
       font-size: 1.2rem;
       border-radius: 3px;
       border-width: 0 0 3px;
@@ -158,6 +158,7 @@ const StyledHome = styled.section`
     }
   }
   .searched-container {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
