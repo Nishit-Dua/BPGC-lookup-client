@@ -14,7 +14,7 @@ const Rollpage: React.FC = () => {
         clearInterval(redirectIn);
       };
     } else {
-      window.location.assign("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+      window.location.assign("https://m.youtube.com/watch?v=dQw4w9WgXcQ");
     }
   }, [timeBeforeRickRoll]);
 
