@@ -47,6 +47,7 @@ const StyledNavbar = styled.nav`
     font-size: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
   }
 `;
 

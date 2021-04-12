@@ -24,9 +24,7 @@ const Rollpage: React.FC = () => {
         <p>Source Code</p>
         <AiOutlineGithub />
       </a>
-      <h1>
-        Click here in {timeBeforeRickRoll / 1000}s or <span> else</span>
-      </h1>
+      <h1>Click here in {timeBeforeRickRoll / 1000}s or else</h1>
     </StyledSection>
   );
 };

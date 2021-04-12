@@ -20,6 +20,11 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
+::selection {
+  background: var(--email-text);
+  color: var(--main-bg);
+}
+
 .light {
   --main-bg: #ffffff;
   --main-text: #1f1f1f;
