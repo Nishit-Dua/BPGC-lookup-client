@@ -1,11 +1,10 @@
 import axios from "axios";
 
-const URI = "https://bitsg-stalker-server.herokuapp.com";
+const URI = "http://localhost:5000";
 
 export const searchData = async (searchQuery: string) => {
   try {
     const axiosResp = await axios.get(`${URI}/search/${searchQuery}`);
-    // console.log(axiosResp);
     return axiosResp.data;
   } catch (error) {
     console.log(`error in Fetching data source: API.ts`);

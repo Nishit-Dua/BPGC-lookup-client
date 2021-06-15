@@ -19,7 +19,7 @@ export interface PersonType {
   hostel: string;
   hostelRoom: null | string;
   _id: null | string;
-  sgList: Array<number | null>;
+  cgList: Array<number | null>;
 }
 
 const initialState: StateType = {

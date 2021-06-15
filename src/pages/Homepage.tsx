@@ -39,7 +39,7 @@ const Homepage: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Search Using Bits ID or Name"
+          placeholder="Search Using Name or Bits ID"
           required
           value={searchValue}
           onChange={(e) => {
@@ -103,7 +103,7 @@ const StyledHome = styled.section`
 
   form {
     padding: 0 0.5rem;
-    width: clamp(200px, 60%, 800px);
+    width: clamp(280px, 60%, 800px);
     align-self: center;
     display: flex;
     align-items: center;

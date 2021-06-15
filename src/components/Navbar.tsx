@@ -9,7 +9,6 @@ const Navbar: React.FC = () => {
   const { dispatch, theme } = useGlobalContext();
 
   useEffect(() => {
-    console.log(theme);
     document.body.classList.value = theme || "light";
   }, [theme, dispatch]);
 
