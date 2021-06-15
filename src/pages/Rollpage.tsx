@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { AiOutlineGithub } from "react-icons/ai";
+import alwaysBeenRickRoll from "../assets/alwaysHaveBeen2.jpg";
+
 const Rollpage: React.FC = () => {
-  const [timeBeforeRickRoll, setTimeBeforeRickRoll] = useState(4000);
+  const [timeBeforeRickRoll, setTimeBeforeRickRoll] = useState(500);
 
   useEffect(() => {
     const TICK = 100;
@@ -20,11 +21,8 @@ const Rollpage: React.FC = () => {
 
   return (
     <StyledSection>
-      <a href="https://github.com/Nishit-Dua/BPGC-lookup-client">
-        <p>Source Code</p>
-        <AiOutlineGithub />
-      </a>
-      <h1>Click here in {timeBeforeRickRoll / 1000}s or else</h1>
+      <img src={alwaysBeenRickRoll} alt="Rick R0ll" />
+      <h1>Wait it's a rickroll . . . Always Have been</h1>
     </StyledSection>
   );
 };
@@ -33,6 +31,12 @@ const StyledSection = styled.section`
   display: grid;
   place-items: center;
   align-self: stretch;
+
+  img {
+    /* width: 80%; */
+    height: 80%;
+    position: relative;
+  }
 
   a {
     background-color: var(--btn-bg);

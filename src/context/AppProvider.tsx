@@ -25,7 +25,7 @@ export interface PersonType {
 const initialState: StateType = {
   searchData: [],
   isLoading: false,
-  theme: "",
+  theme: "light",
   error: {
     isError: false,
     message: "",

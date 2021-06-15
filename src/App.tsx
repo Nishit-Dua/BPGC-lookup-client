@@ -2,13 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import { Footer, Navbar } from "./components";
 
-import {
-  // Depriciationpage,
-  Errorpage,
-  Homepage,
-  Reasonpage,
-  Rollpage,
-} from "./pages";
+import { Errorpage, Homepage, Reasonpage, Rollpage } from "./pages";
 
 function App() {
   return (

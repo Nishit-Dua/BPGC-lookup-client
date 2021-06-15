@@ -1,20 +1,17 @@
 import React from "react";
+import { FaReact } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-import { FaGithub, FaInstagram, FaReact, FaTwitter } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { GoMail } from "react-icons/go";
 
 const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <p>
-        Made By <a href="https://github.com/Nishit-Dua"> Nishit Dua </a>
-        using <FaReact /> and <SiTypescript />
+        Made By some BITSGian using <FaReact /> and <SiTypescript />
         <Link to="/source"> Contribs are welcome! </Link>
       </p>
-      <div className="socials">
+      {/* <div className="socials">
         check me out at{" "}
         <a
           href="https://www.instagram.com/nishit_dua/"
@@ -36,7 +33,7 @@ const Footer: React.FC = () => {
         <a href="mailto:f20180620@goa.bits-pilani.ac.in">
           <GoMail />
         </a>
-      </div>
+      </div> */}
     </StyledFooter>
   );
 };
