@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URI = "http://localhost:5000";
+const URI = "https://bitsg-stalker-server.herokuapp.com";
 
 export const searchData = async (searchQuery: string) => {
   try {
