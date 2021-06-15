@@ -11,7 +11,7 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
   if (person.bitsId[4] !== "A" && person.bitsId[4] !== "B") return <></>;
   console.count("rendered");
   const year = person.bitsId.slice(0, 4);
-  let lastSem = 0;
+  let lastSem = 1;
   let sgList =
     year === "2020"
       ? person.cgList.slice(5)
@@ -30,13 +30,11 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
     <StyledPerson>
       <h2>{person.name.toLowerCase()}</h2>
       <p className="id">{person.bitsId}</p>
-      {/* {year !== "2020" ? ( */}
       <>
         <div className="cg-container">
           {sgList.map((sg, index) => {
             let offset = year === "2017" ? 3 : year === "2016" ? 5 : 1;
             if (index) lastSem = index + offset;
-            lastSem = year === "2020" ? 1 : lastSem;
             return (
               <p key={index}>
                 Sem {index + offset} CG: {sg || "????"}
@@ -66,13 +64,6 @@ const SinglePerson: React.FC<SinglePersonProps> = ({ person }) => {
           </p>
         </div>
       </>
-      {/* //* They can handle the truth now kek */}
-      {/* ) : (
-        <p className="cg-container">
-          Not showing 2020 batch's CG <Link to="/reason">My Reason</Link> you
-          may still stalk your seniors tho 😏
-        </p>
-      )} */}
       Email:
       <a className="email" href={`mailto:${email}`}>
         {email}

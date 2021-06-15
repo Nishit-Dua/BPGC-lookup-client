@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import alwaysBeenRickRoll from "../assets/alwaysHaveBeen2.jpg";
+import alwaysBeenRickRoll from "../assets/alwaysHaveBeen.jpg";
 
 const Rollpage: React.FC = () => {
-  const [timeBeforeRickRoll, setTimeBeforeRickRoll] = useState(500);
+  const [timeBeforeRickRoll, setTimeBeforeRickRoll] = useState(600);
 
   useEffect(() => {
     const TICK = 100;
