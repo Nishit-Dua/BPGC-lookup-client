@@ -1,0 +1,11 @@
+---
+application:
+  name: "bpgc-lookup-client"
+  project: "bpgc-lookup-server"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-bpgc-lookup-client"
+  routes:
+  - application_name: "bpgc-lookup-client"
+    paths:
+    - "/*"
