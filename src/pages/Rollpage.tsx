@@ -31,10 +31,12 @@ const StyledSection = styled.section`
   display: grid;
   place-items: center;
   align-self: stretch;
+  width: 100%;
 
   img {
     /* width: 80%; */
-    height: 80%;
+    width: 60%;
+    object-fit: cover;
     position: relative;
   }
 

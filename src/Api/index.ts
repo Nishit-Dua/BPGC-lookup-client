@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const URI = "https://bitsg-stalker-server.herokuapp.com";
+const URI =
+  "http://bitsstalkerserver-env.eba-epkdy8jm.ap-south-1.elasticbeanstalk.com";
 
 export const searchData = async (searchQuery: string) => {
   try {
